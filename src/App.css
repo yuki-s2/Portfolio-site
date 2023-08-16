@@ -1,30 +1,69 @@
+html,
+body,
+#loot {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: aliceblue;
+  font-family: "Cambria", "Avenir","PT Mono", "Tahoma", "Trebuchet MS", "ヒラギノ明朝 ProN", sans-serif;
+
+}
+img {
+  width: 100%;
+}
 .App {
   width: 100%;
   height: 100vh;
   font-size: 18px;
 }
-
+h1 {
+  font-size: 17em;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.7em;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-shadow: 1px 0px 35px #f1efef;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #f1efef;
 }
-
 header .logo h3 {
   font-size: 30px;
 }
-
 .headerNav {
   list-style: none;
   display: inline-block;
   display: flex;
 }
-
 .headerNav li {
   margin-right: 30px;
 }
-
 .headerNav a {
   text-decoration: none;
+}
+.item {
+  max-width: 600px;
+  display: flex;
+  height: 350px;
+}
+.itemLeft{
+  width: 55%;
+}
+.itemLeft img {
+  object-fit: cover;
+  object-position: -160px -20px;;
+  width: 100%;
+  height: 100%;
+}
+.itemRight {
+width: 45%;
+font-size: 14px;
+padding: 20px;
 }
