@@ -1,5 +1,6 @@
 import React from 'react'
 import img1 from '../images/IMG_63C0F4B54CBD-1.jpeg';
+import { motion } from 'framer-motion';
 
 function Portfolio() {
   return (
@@ -11,9 +12,9 @@ function Portfolio() {
         <div className='itemBox'>枠</div>
 
           <article className='item'>
-            <div className="itemLeft">
+            <motion.div animate={{ rotate: 135 }} transition={{ duration: 3 }}>
             <img src={img1} />
-            </div>
+            </motion.div>
             <div className="itemRight">
             <div className="title">Cafe</div>
             <p>カフェのホームページです。スクールで提供されたデザインを元にコーディングをしてWordPress化しました。</p>
