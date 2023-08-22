@@ -47,47 +47,48 @@ import AnimateOpacity from '../motion/AnimateOpacity';
 
   return (
     <AnimateOpacity>
-    <form ref={form} onSubmit={sendEmail}>
+    <section className='contact'>
+    <form className='contact-form' ref={form} onSubmit={sendEmail}>
 
       <div>
-      <label htmlFor="nameForm">ご氏名：</label>
+      <label className='contact-label' htmlFor="nameForm">お名前</label>
       </div>
             <input
               type="text"
               id="nameForm"
-              className="formInput"
+              className='contact-input'
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
 
             <div>
-              <label htmlFor="mailForm">メールアドレス：</label>
+              <label className='contact-label' htmlFor="mailForm">メールアドレス</label>
             </div>
             <input
               type="email"
               id="mailForm"
-              className="formInput"
+              className='contact-input'
               value={mail}
               onChange={(e) => setMail(e.target.value)}
               required
             />
 
           <div>
-              <label htmlFor="mailContentForm">お問い合わせ内容：</label>
+              <label className='contact-label' htmlFor="mailContentForm">メッセージ</label>
             </div>
             <textarea
               type="text"
               id="mailContentForm"
-              className="formInput"
+              className='contact-message'
               rows="5"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
             />
-      <input type="submit" value="送信"/>
-
+      <button className='contact-send' type="submit" value="Send" disabled="">送 信</button>
     </form>
+    </section>
     </AnimateOpacity>
   );
 };
