@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useState } from 'react';
 import { init, send } from 'emailjs-com';
+import AnimateOpacity from '../motion/AnimateOpacity';
 
 
   export const Contact = () => {
@@ -45,6 +46,7 @@ import { init, send } from 'emailjs-com';
 
 
   return (
+    <AnimateOpacity>
     <form ref={form} onSubmit={sendEmail}>
 
       <div>
@@ -86,6 +88,7 @@ import { init, send } from 'emailjs-com';
       <input type="submit" value="送信"/>
 
     </form>
+    </AnimateOpacity>
   );
 };
 
