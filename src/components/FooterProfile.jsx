@@ -1,18 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
-
-const Header = () => {
+const FooterProfile = () => {
   return (
-    <div className='header'>
-      <div className="header_container">
-      <div className='header_logo'>
-        <h1>Yuki Honda</h1>
-      </div>
-
-      <nav className='header_nav'>
+    <div className='footer'>
+      <div className="footer_container">
+      <nav className='footer_nav'>
         <motion.div  whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} >
         <li>
           <Link to="/">Portfolio</Link>
@@ -29,10 +26,16 @@ const Header = () => {
         </li>
         </motion.div>
       </nav>
-      </div>
+      <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+          <a className="footer_FontAwesome" href="https://github.com/yuki-s2">
+            <FontAwesomeIcon icon={faGithub} size="xl" />
+          </a>
+        </motion.div>
+</div>
+      <p className='footer_copy'>© Yuki Honda website portfolio 2023</p>
+
     </div>
-  );
+  )
 }
 
-
-export default Header;
+export default FooterProfile;
