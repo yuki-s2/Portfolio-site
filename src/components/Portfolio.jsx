@@ -36,7 +36,7 @@ function Portfolio() {
           </a>
 
           <a href="http://sample-w.com/">
-            <article className="portfolio_item">
+            <article className="portfolio_item portfolio_item_reverse">
               <div className="portfolio_item_border"></div>
               <div className="portfolio_item_textBox_left">
                 <div className="portfolio_item_text">

@@ -59,15 +59,20 @@ h1 {
   font-weight: bold;
   letter-spacing: -0.05em;
   line-height: 0.7em;
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
-  color: rgb(95, 108, 119
-  );
+  color: rgb(95, 108, 119);
 }
 
 .header {
   background: rgb(217, 236, 252);
   width: 100%;
+  height: 45vh;
+
+  @include mq(sm) {
+    z-index: 100;
+    height: 150px;
+  }
 
   &_profile {
     width: 100%;
@@ -76,31 +81,66 @@ h1 {
     top: 0;
     left: 0;
     z-index: 10;
+    &_logo {
+      h1 {
+        @include mq(sm) {
+          padding-top: 40px;
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+    &_nav {
+      @include mq(sm) {
+        padding-top: 15px !important;
+      }
+    }
 
     &_container {
       max-width: 1200px;
       height: 150px;
-      display: flex;
-      justify-content: space-between;
       align-items: center;
       margin: 0 auto;
       padding: 0 50px;
+      @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+      }
+      @include mq(sm) {
+        padding: 0 30px;
+      }
     }
   }
 
   &_container {
     max-width: 1200px;
-    height: 45vh;
-    display: flex;
-    justify-content: space-between;
+    height: 100%;
     align-items: center;
     margin: 0 auto;
     padding: 0 50px;
+
+    @include mq(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include mq(sm) {
+      width: 100%;
+      padding: 20px 30px;
+    }
   }
 
   &_logo h1 {
     font-size: 27px;
     font-weight: bold;
+    letter-spacing: 1.2px;
+
+    @include mq(sm) {
+      font-size: 20px;
+      padding-top: 37px;
+      color: rgb(132, 145, 156);
+    }
   }
 
   &_nav {
@@ -112,9 +152,21 @@ h1 {
     width: 400px;
     justify-content: space-between;
 
+    @include mq(sm) {
+      width: 100%;
+      height: 40px;
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+
     & li a {
       color: rgb(95, 108, 119);
       font-weight: bold;
+
+      @include mq(sm) {
+        font-weight: 500;
+        color: rgb(132, 145, 156);
+      }
     }
   }
 }
@@ -123,25 +175,56 @@ h1 {
   background: rgb(217, 236, 252);
   width: 100%;
   height: 170px;
+
+  @include mq(sm) {
+    height: 130px;
+  }
+
   &_container {
     padding: 70px 0 0;
     display: flex;
+    width: 700px;
+    margin: 0 auto;
+
+    @include mq(sm) {
+      width: 85%;
+      padding: 40px 0 0;
+    }
   }
+
   &_FontAwesome {
     color: rgb(95, 108, 119);
     width: 120px;
     text-align: center;
+
+    @include mq(sm) {
+      width: 50px;
+      padding-left: 20px;
+    }
   }
+
   &_nav {
     display: flex;
     justify-content: space-between;
-    width: 520px;
-    margin: 0 auto;
-    padding-left: 120px;
+    width: 700px;
     align-items: center;
+
+    @include mq(md) {
+      // margin: 0 auto;
+      padding-left: 120px;
+    }
+
+    @include mq(sm) {
+      width: 270px;
+
+    }
 
     li {
       list-style: none;
+
+      @include mq(sm) {
+        font-size: 14px;
+      }
 
       a {
         color: rgb(95, 108, 119);
@@ -154,6 +237,11 @@ h1 {
     font-size: 10px;
     margin-top: 20px;
     color: rgb(95, 108, 119);
+
+    @include mq(sm) {
+      color: rgb(116, 125, 134);
+      margin-top: 15px;
+    }
   }
 }
 
@@ -181,17 +269,45 @@ h1 {
     transform: translate(-50%, -50%);
     text-shadow: 1px 0px 35px rgb(95, 108, 119);
 
+    @include mq(sm) {
+      font-size: 50px;
+      letter-spacing: 0.1em;
+    }
   }
+
   &_container {
     padding: 100px 0;
+
+    @include mq(sm) {
+      padding: 10px 0
+    }
+    a {
+      @include mq(sm) {
+        margin-bottom: 70px;
+      }
+    }
   }
+
   &_item {
     position: relative;
     max-width: 500px;
-    display: flex;
-    height: 350px;
     margin: 70px auto;
-  
+
+    @include mq(md) {
+      height: 350px;
+      display: flex;
+    }
+
+    @include mq(sm) {
+      width: 80%;
+    }
+    &_reverse {
+      @include mq(sm) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
     &_border {
       position: absolute;
       top: 0;
@@ -200,111 +316,236 @@ h1 {
       height: 318px;
       margin: 13px;
       border: 2px solid rgb(95, 108, 119);
+      @include mq(sm) {
+        border: 0.2px solid rgb(145, 155, 165);
+      }
     }
-  
+
     &_img {
       height: 100%;
-  
+      @include mq(sm) {
+        height: 180px;
+      }
+
       & img {
         object-fit: cover;
         width: 100%;
         height: 100%;
       }
     }
-  
+
     &_img1 {
-      object-position: -290px -5px;
-      ;
+      @include mq(md) {
+        object-position: -290px -5px;
+      }
     }
-  
+
     &_img2 {
-      object-position: -450px -3px;
-      ;
+      @include mq(md) {
+        object-position: -450px -3px;
+      }
     }
-  
+
     &_img3 {
-      object-position: -160px -1px;
-      ;
+      @include mq(md) {
+        object-position: -160px -1px;
+      }
     }
-  
+
     &_textBox_left {
       width: 150%;
       font-size: 14px;
-      padding-left: 13px;
+
+      @include mq(md) {
+        padding-left: 13px;
+      }
+
+      @include mq(sm) {
+        width: 100%;
+      }
     }
-  
+
     &_textBox_right {
       width: 100%;
       font-size: 14px;
-      padding-right: 13px;
+      @include mq(md) {
+        padding-right: 13px;
+      }
     }
-  
+
     &_text {
       margin: 0 auto;
       height: 350px;
       position: relative;
       padding: 80px 0;
       color: rgb(95, 108, 119);
-  
+      @include mq(sm) {
+        height: 120px;
+        padding: 20px 0;
+      }
+
     }
-  
+
     &_title {
       font-size: 25px;
       font-weight: bold;
       text-align: center;
+      @include mq(sm) {
+        font-size: 18px;
+      }
     }
-  
+
     &_detail {
       font-size: 10px;
       margin-top: 20px;
       line-height: 1.2;
       text-align: center;
+      @include mq(sm) {
+        margin-top: 10px;
+      }
     }
-  
+
     &_when {
       font-size: 10px;
       margin-top: 10px;
       text-align: center;
     }
   }
+
   &_category {
     display: inline-block;
     position: absolute;
     bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
-  
+    @include mq(sm) {
+      display: flex;
+      bottom: 0;
+    }
+
     &_item {
       font-size: 10px;
       text-align: center;
       width: 100px;
       height: 20px;
       margin: 0 auto;
-      padding: 5px 0;
-  
-      &:not(:first-child) {
-        margin-top: 10px;
+
+      @include mq(md) {
+        &:not(:first-child) {
+          margin-top: 10px;
+          padding: 5px 0;
+        }
+      }
+      @include mq(sm) {
+        width: 70px;
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
       }
     }
   }
+
   &_design {
     border: 0.5px solid rgb(155, 154, 154);
     color: rgb(222, 199, 222);
   }
+
   &_coding {
     border: 0.5px solid rgb(155, 154, 154);
     color: rgb(198, 198, 160);
   }
+
   &_wordpress {
     border: 0.5px solid rgb(95, 108, 119);
     color: rgb(204, 204, 235);
   }
 }
 
+.profile {
+  width: 100%;
+  height: 1000px;
+  @include mq(sm) {
+    height: 700px;
+  }
+
+  &_title {
+    font-size: 200px;
+    text-shadow: 1px 0px 35px rgb(55, 63, 70);
+    color: #fff;
+    @include mq(sm) {
+      font-size: 65px;
+      left: 10px !important;
+      font-weight: 600;
+      text-shadow: 1px 0px 35px rgb(27, 31, 34);
+    }
+  }
+
+  &_text {
+    width: 700px;
+
+    @include mq(md) {
+      position: absolute;
+      top: 100vh;
+      transform: translateX(30%); 
+    }
+    @include mq(sm) {
+      width: 100%;
+      margin-top: 600px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 2.5;
+      font-weight: 500;
+      color: rgb(95, 108, 119);
+      @include mq(sm) {
+        font-size: 15px;
+        margin: 0 auto;
+        width: 80%;
+        line-height: 1.9;
+      }
+    }
+  }
+
+  &_text2 {
+    width: 700px;
+    @include mq(md) {
+      position: absolute;
+      top: 165vh;
+      transform: translateX(60%);
+    }
+    @include mq(sm) {
+     width: 100%;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 2.5;
+      font-weight: 500;
+      color: rgb(95, 108, 119);
+      @include mq(sm) {
+        font-size: 15px;
+        margin: 0 auto;
+        width: 80%;
+        line-height: 1.9;
+      }
+    }
+  }
+}
+
 .contact {
   &-form {
-    margin: 100px auto;
     max-width: 400px;
+
+    @include mq(md) {
+      margin: 100px auto;
+    }
+
+    @include mq(sm) {
+      width: 80%;
+      margin: 0 auto;
+      padding: 80px 0 100px;
+    }
 
   }
 
@@ -337,36 +578,4 @@ h1 {
     border-radius: 2px;
     font-size: 12px;
   }
-}
-
-.profile {
-  width: 100%;
-  height: 1000px;
-  &_title {
-    font-size: 200px;
-    text-shadow: 1px 0px 35px rgb(55, 63, 70);
-    color: #fff;
-  }
-  &_text {
-    width: 700px;
-    position: absolute;
-    top: 100vh;
-    transform: translateX(30%);
-    p {
-      font-size: 25px;
-      line-height: 2.5;
-      font-weight: bold;
-    }
-    }
-  &_text2 {
-    width: 700px;
-    position: absolute;
-    top: 165vh;
-    transform: translateX( 60% );
-    p {
-      font-size: 25px;
-      line-height: 2.5;
-      font-weight: bold;
-    }
-    }
 }

@@ -12,7 +12,9 @@ html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a
   font-size: 100%;
   vertical-align: baseline;
 }
-
+h1 {
+  margin: 0em;
+}
 header, footer, nav, section, article, aside, figure, figcaption {
   display: block;
 }

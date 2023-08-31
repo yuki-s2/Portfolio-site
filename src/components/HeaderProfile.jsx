@@ -6,11 +6,11 @@ const HeaderProfile = () => {
   return (
     <div className="header_profile">
       <div className="header_profile_container">
-        <div className="header_logo">
+        <div className="header_profile_logo">
           <h1>Yuki Honda</h1>
         </div>
 
-        <nav className="header_nav">
+        <nav className="header_nav header_profile_nav">
           <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
             <li>
               <Link to="/">Portfolio</Link>

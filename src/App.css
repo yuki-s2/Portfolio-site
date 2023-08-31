@@ -41,7 +41,7 @@ h1 {
   font-weight: bold;
   letter-spacing: -0.05em;
   line-height: 0.7em;
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   color: rgb(95, 108, 119);
 }
@@ -49,6 +49,13 @@ h1 {
 .header {
   background: rgb(217, 236, 252);
   width: 100%;
+  height: 45vh;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    z-index: 100;
+    height: 150px;
+  }
 }
 .header_profile {
   width: 100%;
@@ -58,27 +65,67 @@ h1 {
   left: 0;
   z-index: 10;
 }
+@media screen and (max-width: 767px) {
+  .header_profile_logo h1 {
+    padding-top: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header_profile_nav {
+    padding-top: 15px !important;
+  }
+}
 .header_profile_container {
   max-width: 1200px;
   height: 150px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   padding: 0 50px;
 }
+@media screen and (min-width: 768px) {
+  .header_profile_container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header_profile_container {
+    padding: 0 30px;
+  }
+}
 .header_container {
   max-width: 1200px;
-  height: 45vh;
-  display: flex;
-  justify-content: space-between;
+  height: 100%;
   align-items: center;
   margin: 0 auto;
   padding: 0 50px;
+}
+@media screen and (min-width: 768px) {
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header_container {
+    width: 100%;
+    padding: 20px 30px;
+  }
 }
 .header_logo h1 {
   font-size: 27px;
   font-weight: bold;
+  letter-spacing: 1.2px;
+}
+@media screen and (max-width: 767px) {
+  .header_logo h1 {
+    font-size: 20px;
+    padding-top: 37px;
+    color: rgb(132, 145, 156);
+  }
 }
 .header_nav {
   margin: 0;
@@ -89,9 +136,23 @@ h1 {
   width: 400px;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .header_nav {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+}
 .header_nav li a {
   color: rgb(95, 108, 119);
   font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .header_nav li a {
+    font-weight: 500;
+    color: rgb(132, 145, 156);
+  }
 }
 
 .footer {
@@ -99,25 +160,57 @@ h1 {
   width: 100%;
   height: 170px;
 }
+@media screen and (max-width: 767px) {
+  .footer {
+    height: 130px;
+  }
+}
 .footer_container {
   padding: 70px 0 0;
   display: flex;
+  width: 700px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .footer_container {
+    width: 85%;
+    padding: 40px 0 0;
+  }
 }
 .footer_FontAwesome {
   color: rgb(95, 108, 119);
   width: 120px;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .footer_FontAwesome {
+    width: 50px;
+    padding-left: 20px;
+  }
+}
 .footer_nav {
   display: flex;
   justify-content: space-between;
-  width: 520px;
-  margin: 0 auto;
-  padding-left: 120px;
+  width: 700px;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .footer_nav {
+    padding-left: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer_nav {
+    width: 270px;
+  }
 }
 .footer_nav li {
   list-style: none;
+}
+@media screen and (max-width: 767px) {
+  .footer_nav li {
+    font-size: 14px;
+  }
 }
 .footer_nav li a {
   color: rgb(95, 108, 119);
@@ -127,6 +220,12 @@ h1 {
   font-size: 10px;
   margin-top: 20px;
   color: rgb(95, 108, 119);
+}
+@media screen and (max-width: 767px) {
+  .footer_copy {
+    color: rgb(116, 125, 134);
+    margin-top: 15px;
+  }
 }
 
 .portfolio {
@@ -152,15 +251,46 @@ h1 {
   transform: translate(-50%, -50%);
   text-shadow: 1px 0px 35px rgb(95, 108, 119);
 }
+@media screen and (max-width: 767px) {
+  .portfolio_title {
+    font-size: 50px;
+    letter-spacing: 0.1em;
+  }
+}
 .portfolio_container {
   padding: 100px 0;
+}
+@media screen and (max-width: 767px) {
+  .portfolio_container {
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio_container a {
+    margin-bottom: 70px;
+  }
 }
 .portfolio_item {
   position: relative;
   max-width: 500px;
-  display: flex;
-  height: 350px;
   margin: 70px auto;
+}
+@media screen and (min-width: 768px) {
+  .portfolio_item {
+    height: 350px;
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio_item {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio_item_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .portfolio_item_border {
   position: absolute;
@@ -171,8 +301,18 @@ h1 {
   margin: 13px;
   border: 2px solid rgb(95, 108, 119);
 }
+@media screen and (max-width: 767px) {
+  .portfolio_item_border {
+    border: 0.2px solid rgb(145, 155, 165);
+  }
+}
 .portfolio_item_img {
   height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .portfolio_item_img {
+    height: 180px;
+  }
 }
 .portfolio_item_img img {
   -o-object-fit: cover;
@@ -180,27 +320,46 @@ h1 {
   width: 100%;
   height: 100%;
 }
-.portfolio_item_img1 {
-  -o-object-position: -290px -5px;
-     object-position: -290px -5px;
+@media screen and (min-width: 768px) {
+  .portfolio_item_img1 {
+    -o-object-position: -290px -5px;
+       object-position: -290px -5px;
+  }
 }
-.portfolio_item_img2 {
-  -o-object-position: -450px -3px;
-     object-position: -450px -3px;
+@media screen and (min-width: 768px) {
+  .portfolio_item_img2 {
+    -o-object-position: -450px -3px;
+       object-position: -450px -3px;
+  }
 }
-.portfolio_item_img3 {
-  -o-object-position: -160px -1px;
-     object-position: -160px -1px;
+@media screen and (min-width: 768px) {
+  .portfolio_item_img3 {
+    -o-object-position: -160px -1px;
+       object-position: -160px -1px;
+  }
 }
 .portfolio_item_textBox_left {
   width: 150%;
   font-size: 14px;
-  padding-left: 13px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio_item_textBox_left {
+    padding-left: 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio_item_textBox_left {
+    width: 100%;
+  }
 }
 .portfolio_item_textBox_right {
   width: 100%;
   font-size: 14px;
-  padding-right: 13px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio_item_textBox_right {
+    padding-right: 13px;
+  }
 }
 .portfolio_item_text {
   margin: 0 auto;
@@ -209,16 +368,32 @@ h1 {
   padding: 80px 0;
   color: rgb(95, 108, 119);
 }
+@media screen and (max-width: 767px) {
+  .portfolio_item_text {
+    height: 120px;
+    padding: 20px 0;
+  }
+}
 .portfolio_item_title {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .portfolio_item_title {
+    font-size: 18px;
+  }
 }
 .portfolio_item_detail {
   font-size: 10px;
   margin-top: 20px;
   line-height: 1.2;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .portfolio_item_detail {
+    margin-top: 10px;
+  }
 }
 .portfolio_item_when {
   font-size: 10px;
@@ -232,16 +407,32 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
 }
+@media screen and (max-width: 767px) {
+  .portfolio_category {
+    display: flex;
+    bottom: 0;
+  }
+}
 .portfolio_category_item {
   font-size: 10px;
   text-align: center;
   width: 100px;
   height: 20px;
   margin: 0 auto;
-  padding: 5px 0;
 }
-.portfolio_category_item:not(:first-child) {
-  margin-top: 10px;
+@media screen and (min-width: 768px) {
+  .portfolio_category_item:not(:first-child) {
+    margin-top: 10px;
+    padding: 5px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio_category_item {
+    width: 70px;
+  }
+  .portfolio_category_item:not(:first-child) {
+    margin-left: 10px;
+  }
 }
 .portfolio_design {
   border: 0.5px solid rgb(155, 154, 154);
@@ -256,9 +447,102 @@ h1 {
   color: rgb(204, 204, 235);
 }
 
+.profile {
+  width: 100%;
+  height: 1000px;
+}
+@media screen and (max-width: 767px) {
+  .profile {
+    height: 700px;
+  }
+}
+.profile_title {
+  font-size: 200px;
+  text-shadow: 1px 0px 35px rgb(55, 63, 70);
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .profile_title {
+    font-size: 65px;
+    left: 10px !important;
+    font-weight: 600;
+    text-shadow: 1px 0px 35px rgb(27, 31, 34);
+  }
+}
+.profile_text {
+  width: 700px;
+}
+@media screen and (min-width: 768px) {
+  .profile_text {
+    position: absolute;
+    top: 100vh;
+    transform: translateX(30%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile_text {
+    width: 100%;
+    margin-top: 600px;
+  }
+}
+.profile_text p {
+  font-size: 20px;
+  line-height: 2.5;
+  font-weight: 500;
+  color: rgb(95, 108, 119);
+}
+@media screen and (max-width: 767px) {
+  .profile_text p {
+    font-size: 15px;
+    margin: 0 auto;
+    width: 80%;
+    line-height: 1.9;
+  }
+}
+.profile_text2 {
+  width: 700px;
+}
+@media screen and (min-width: 768px) {
+  .profile_text2 {
+    position: absolute;
+    top: 165vh;
+    transform: translateX(60%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile_text2 {
+    width: 100%;
+  }
+}
+.profile_text2 p {
+  font-size: 20px;
+  line-height: 2.5;
+  font-weight: 500;
+  color: rgb(95, 108, 119);
+}
+@media screen and (max-width: 767px) {
+  .profile_text2 p {
+    font-size: 15px;
+    margin: 0 auto;
+    width: 80%;
+    line-height: 1.9;
+  }
+}
+
 .contact-form {
-  margin: 100px auto;
   max-width: 400px;
+}
+@media screen and (min-width: 768px) {
+  .contact-form {
+    margin: 100px auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px 0 100px;
+  }
 }
 .contact-label {
   font-weight: bold;
@@ -285,37 +569,5 @@ h1 {
   background: rgb(95, 108, 119);
   border-radius: 2px;
   font-size: 12px;
-}
-
-.profile {
-  width: 100%;
-  height: 1000px;
-}
-.profile_title {
-  font-size: 200px;
-  text-shadow: 1px 0px 35px rgb(55, 63, 70);
-  color: #fff;
-}
-.profile_text {
-  width: 700px;
-  position: absolute;
-  top: 100vh;
-  transform: translateX(30%);
-}
-.profile_text p {
-  font-size: 25px;
-  line-height: 2.5;
-  font-weight: bold;
-}
-.profile_text2 {
-  width: 700px;
-  position: absolute;
-  top: 165vh;
-  transform: translateX(60%);
-}
-.profile_text2 p {
-  font-size: 25px;
-  line-height: 2.5;
-  font-weight: bold;
 }
 /*# sourceMappingURL=App.css.map */
