@@ -14,6 +14,26 @@ function Portfolio() {
         </div>
 
         <div className="portfolio_container">
+
+        <a href="src/company/company.html">
+            <article className="portfolio_item portfolio_item_reverse">
+              <div className="portfolio_item_border"></div>
+              <div className="portfolio_item_textBox_left">
+                <div className="portfolio_item_text">
+                  <div className="portfolio_item_title">Website Design Company</div>
+                  <p className="portfolio_item_detail">WEB制作会社のホームページです。</p>
+                  <p className="portfolio_item_when">2023.8</p>
+                  <div className="portfolio_category">
+                    <div className="portfolio_category_item portfolio_coding">coding</div>
+                  </div>
+                </div>
+              </div>
+                <div className="portfolio_item_img">
+                  <img src="../IMG4.png" className="portfolio_item_img4" />
+                </div>
+            </article>
+          </a>
+
           <a href="http://sample-j.xyz/cake-shop/">
             <article className="portfolio_item">
               <div className="portfolio_item_border"></div>
@@ -35,7 +55,7 @@ function Portfolio() {
             </article>
           </a>
 
-          <a href="http://sample-w.com/">
+          <a href="src/furniture/furniture.html">
             <article className="portfolio_item portfolio_item_reverse">
               <div className="portfolio_item_border"></div>
               <div className="portfolio_item_textBox_left">
@@ -46,7 +66,6 @@ function Portfolio() {
                   <div className="portfolio_category">
                     <div className="portfolio_category_item portfolio_design">design</div>
                     <div className="portfolio_category_item portfolio_coding">coding</div>
-                    <div className="portfolio_category_item portfolio_wordpress">WordPress</div>
                   </div>
                 </div>
               </div>
@@ -56,7 +75,7 @@ function Portfolio() {
             </article>
           </a>
 
-          <a href="https://yuki-honda.net/">
+          {/* <a href="http://sample-w.com/">
             <article className="portfolio_item">
               <div className="portfolio_item_border"></div>
                 <div className="portfolio_item_img">
@@ -68,14 +87,14 @@ function Portfolio() {
                   <p className="portfolio_item_detail">カフェのホームページです。</p>
                   <p className="portfolio_item_when">2023.6</p>
                   <div className="portfolio_category">
-                    <div className="portfolio_category_item portfolio_design">design</div>
                     <div className="portfolio_category_item portfolio_coding">coding</div>
                     <div className="portfolio_category_item portfolio_wordpress">WordPress</div>
                   </div>
                 </div>
               </div>
             </article>
-          </a>
+          </a> */}
+
         </div>
       </section>
       <Footer />
