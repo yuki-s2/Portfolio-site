@@ -15,7 +15,7 @@ function Portfolio() {
 
         <div className="portfolio_container">
 
-        <a href="src/company/company.html">
+        <a href="http://monie-gold-cp.me/">
             <article className="portfolio_item portfolio_item_reverse">
               <div className="portfolio_item_border"></div>
               <div className="portfolio_item_textBox_left">
@@ -55,7 +55,7 @@ function Portfolio() {
             </article>
           </a>
 
-          <a href="src/furniture/furniture.html">
+          <a href="http://sample-w.com/">
             <article className="portfolio_item portfolio_item_reverse">
               <div className="portfolio_item_border"></div>
               <div className="portfolio_item_textBox_left">
