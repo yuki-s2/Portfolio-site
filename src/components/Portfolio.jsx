@@ -6,8 +6,9 @@ import Footer from "./Footer";
 
 function Portfolio() {
   return (
+    <>
+    <Header />
     <AnimateOpacity>
-      <Header />
       <section className="portfolio">
         <div className="portfolio_headline">
           <h2 className="portfolio_title">Portfolio</h2>
@@ -99,6 +100,7 @@ function Portfolio() {
       </section>
       <Footer />
     </AnimateOpacity>
+    </>
   );
 }
 

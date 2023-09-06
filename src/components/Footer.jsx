@@ -21,7 +21,7 @@ const Footer = () => {
           </motion.div>
           <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
             <li>
-              <Link to="/Contact">Contact</Link>
+            <Link to="/Contact">Contact</Link>
             </li>
           </motion.div>
         </nav>

@@ -43,8 +43,9 @@ export const Contact = () => {
   };
 
   return (
+    <>
+    <Header />
     <AnimateOpacity>
-      <Header />
       <section className="contact">
         <form className="contact-form" ref={form} onSubmit={sendEmail}>
           <div>
@@ -101,6 +102,7 @@ export const Contact = () => {
       </section>
       <Footer />
     </AnimateOpacity>
+    </>
   );
 };
 

@@ -11,6 +11,11 @@ $breakpoints: (
   }
 }
 
+*{
+  padding:0;
+  margin:0;
+  }
+
 body,
 #root {
   width: 100%;
@@ -18,6 +23,7 @@ body,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background: rgb(217, 236, 252);
 }
 
 .App {
@@ -71,29 +77,29 @@ h1 {
 
   @include mq(sm) {
     z-index: 100;
-    height: 150px;
+    height: 120px;
   }
 
   &_profile {
     width: 100%;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    background: rgb(217, 236, 252);
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // z-index: 10;
     &_logo {
       h1 {
         @include mq(sm) {
-          padding-top: 40px;
-          font-size: 24px;
-          font-weight: 700;
+          padding-top: 30px;
+          font-size: 20px;
+          font-weight: bold;
           letter-spacing: 1.2px;
         }
       }
     }
     &_nav {
       @include mq(sm) {
-        padding-top: 15px !important;
+        padding-top: 20px !important;
       }
     }
 
@@ -109,6 +115,7 @@ h1 {
       }
       @include mq(sm) {
         padding: 0 30px;
+        height: 120px;
       }
     }
   }
@@ -127,7 +134,7 @@ h1 {
 
     @include mq(sm) {
       width: 100%;
-      padding: 20px 30px;
+      padding: 0 30px 20px;
     }
   }
 
@@ -138,7 +145,7 @@ h1 {
 
     @include mq(sm) {
       font-size: 20px;
-      padding-top: 37px;
+      padding-top: 30px;
       color: rgb(132, 145, 156);
     }
   }
@@ -174,7 +181,7 @@ h1 {
 .footer {
   background: rgb(217, 236, 252);
   width: 100%;
-  height: 170px;
+  height: 170px;  
 
   @include mq(sm) {
     height: 130px;
@@ -185,6 +192,7 @@ h1 {
     display: flex;
     width: 700px;
     margin: 0 auto;
+    justify-content: center;
 
     @include mq(sm) {
       width: 85%;
@@ -250,6 +258,7 @@ h1 {
 
   &_headline {
     height: calc(100vh - 45vh);
+    // height: 100vh;
     position: relative;
     background: url(../public/45789e65571539dab76da88482a296b0.png) center center/cover;
     background-attachment: fixed;
@@ -468,6 +477,7 @@ h1 {
 .profile {
   width: 100%;
   height: 1000px;
+  // padding-top: 100px;
   @include mq(sm) {
     height: 700px;
   }

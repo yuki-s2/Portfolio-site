@@ -1,17 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import AnimateOpacity from '../motion/AnimateOpacity';
 
 
 
 const Header = () => {
   return (
-    <div className='header'>
+    <header className='header'>
       <div className="header_container">
+      <AnimateOpacity>
       <div className='header_logo'>
         <h1>Yuki Honda</h1>
       </div>
-
+      </AnimateOpacity>
+      <AnimateOpacity>
       <nav className='header_nav'>
         <motion.div  whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} >
         <li>
@@ -29,8 +32,9 @@ const Header = () => {
         </li>
         </motion.div>
       </nav>
+      </AnimateOpacity>
       </div>
-    </div>
+    </header>
   );
 }
 

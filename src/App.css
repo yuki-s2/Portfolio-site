@@ -1,4 +1,9 @@
 @charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body,
 #root {
   width: 100%;
@@ -6,6 +11,7 @@ body,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background: rgb(217, 236, 252);
 }
 
 .App {
@@ -54,28 +60,24 @@ h1 {
 @media screen and (max-width: 767px) {
   .header {
     z-index: 100;
-    height: 150px;
+    height: 120px;
   }
 }
 .header_profile {
   width: 100%;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
+  background: rgb(217, 236, 252);
 }
 @media screen and (max-width: 767px) {
   .header_profile_logo h1 {
-    padding-top: 40px;
-    font-size: 24px;
-    font-weight: 700;
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
     letter-spacing: 1.2px;
   }
 }
 @media screen and (max-width: 767px) {
   .header_profile_nav {
-    padding-top: 15px !important;
+    padding-top: 20px !important;
   }
 }
 .header_profile_container {
@@ -94,6 +96,7 @@ h1 {
 @media screen and (max-width: 767px) {
   .header_profile_container {
     padding: 0 30px;
+    height: 120px;
   }
 }
 .header_container {
@@ -112,7 +115,7 @@ h1 {
 @media screen and (max-width: 767px) {
   .header_container {
     width: 100%;
-    padding: 20px 30px;
+    padding: 0 30px 20px;
   }
 }
 .header_logo h1 {
@@ -123,7 +126,7 @@ h1 {
 @media screen and (max-width: 767px) {
   .header_logo h1 {
     font-size: 20px;
-    padding-top: 37px;
+    padding-top: 30px;
     color: rgb(132, 145, 156);
   }
 }
@@ -170,6 +173,7 @@ h1 {
   display: flex;
   width: 700px;
   margin: 0 auto;
+  justify-content: center;
 }
 @media screen and (max-width: 767px) {
   .footer_container {
